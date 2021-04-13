@@ -87,7 +87,7 @@ this.flag  =  1;
 ```
 
 #### Note:
-Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, I gave the explanations above. 
+Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, I gave the explanations above. I discuss more about how I implemented the features in the video.
 
 
 ## Project Description of before Shawn's Fork
