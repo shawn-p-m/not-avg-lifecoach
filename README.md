@@ -79,7 +79,7 @@ this.fullText  +=
 this.flag  =  1;
 
 }
-	```
+```
 
 #### Note:
 Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, here you go. 
