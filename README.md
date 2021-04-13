@@ -1,4 +1,25 @@
-# NOT YOUR AVERAGE LIFE COACH
+
+# NOT YOUR AVERAGE LIFE COACH Shawn's Fork
+
+## Shawn's two new features
+- Translate to French
+- Show Wikipedia Description
+
+### 1. Translate to French
+The main chatbot messenger page now includes a button in the chatbot navbar (for mobile and desktop), that allows the user to toggle between English and French. This feature injects either English or French Bot responses into our Bot Component depending on the state of our button in the messenger navbar. For this feature, I am using the **npm translate API** https://www.npmjs.com/package/translate.
+
+#### About the translate API 
+As stated in the docs, the translate API can "Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), Yandex or [Libre](https://libretranslate.com/):" I used the Libre Engine because I like open source. Inside asyncronous Javascript functions the API can be used like so: 
+```
+const text = await translate("Hello world", "es");
+console.log(text); // Hola mundo
+```
+
+### 2. Show Wikipedia Description
+
+
+
+## Project Description of before Shawn's Fork
 
 ### Navigation
   - [Getting Started](#getting-started)
