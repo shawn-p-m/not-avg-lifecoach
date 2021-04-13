@@ -9,6 +9,10 @@
 ### 1. Translate to French in Chat Messenger
 The main chatbot messenger page now includes a button in the chatbot navbar (for mobile and desktop), that allows the user to toggle between English and French. This feature injects either English or French Bot responses into our Bot Component depending on the state of our button in the messenger navbar. For this feature, I am using the **npm translate API** https://www.npmjs.com/package/translate.
 
+<div align="center">
+  <img height="300" src="./Documentation/img/translate-feature.PNG">
+</div>
+
 #### About the translate API 
 As stated in the docs, the translate API can "Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), Yandex or [Libre](https://libretranslate.com/):" I used the Libre Engine because I like open source. 
 
@@ -28,6 +32,10 @@ this.frenchText = await translate(this.conversation[this.index].text, "fr");
 
 ### 2. Show "Wikipedia Description" in POS Tagging Feature
 In the POS Tagging feature, I added an extra column called "Wikipedia Description". For each POS Tagging word that returned results from Wikipedia, I display this description in the table. For this feature I am using the **wikipedia API** https://www.npmjs.com/package/wikipedia.
+
+<div align="center">
+  <img height="300" src="./Documentation/img/wikipedia-feature.PNG">
+</div>
 
 #### About the wikipedia API
 This API works by taking an input word you'd like to search as an argument in a function. It then returns a JSON object with a lot of data about the Wikipedia page that matches the input word. 
