@@ -44,20 +44,19 @@ try {
 
 const  page  =  await  wiki.page(word);
 const  summary  =  await  page.summary();
-let  wikiDescription  =  summary.description ?  
-						 summary.description
-					   : "No wiki info found";
+let  wikiDescription  =  summary.description ? summary.description
+					     : "No wiki info found";
 
 this.fullText  +=
-				"<tr class = 'tr'><td>"  
-				+ this.word[index].value  +
-				"</td><td>"  +
-				this.word[index].pos  +
-				"</td><td>"  +
-				meaning  +
-				"</td><td>"  +
-				wikiDescription  +
-				"</td></tr>";
+		  "<tr class = 'tr'><td>"  
+		  + this.word[index].value  +
+		  "</td><td>"  +
+		  this.word[index].pos  +
+		  "</td><td>"  +
+		  meaning  +
+		  "</td><td>"  +
+		  wikiDescription  +
+		  "</td></tr>";
 
 this.flag  =  1;
 
