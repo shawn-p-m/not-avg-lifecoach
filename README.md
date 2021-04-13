@@ -23,7 +23,7 @@ translate.engine = "libre";
 
 My usage inside async method: 
 ```
-this.frenchText = await translate("Hello", "fr");
+this.frenchText = await translate(this.conversation[this.index].text, "fr");
 ```
 
 ### 2. Show "Wikipedia Description" in POS Tagging Feature
