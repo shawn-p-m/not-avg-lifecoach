@@ -32,10 +32,8 @@ export default {
     async getWikiSummary(word, index, meaning) {
       try {
         const page = await wiki.page(word);
-        console.log(page);
-        //Response of type @Page object
+
         const summary = await page.summary();
-        console.log(summary);
 
         let wikiDescription = summary.description
           ? summary.description
