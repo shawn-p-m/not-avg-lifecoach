@@ -47,8 +47,7 @@ const  summary  =  await  page.summary();
 let  wikiDescription  =  summary.description ? summary.description
 					     : "No wiki info found";
 
-this.fullText  +=
-		  "<tr class = 'tr'><td>"  
+this.fullText  += "<tr class = 'tr'><td>"  
 		  + this.word[index].value  +
 		  "</td><td>"  +
 		  this.word[index].pos  +
@@ -64,14 +63,13 @@ this.flag  =  1;
 
 if (!this.word[index.value]) {
 
-this.fullText  +=
-			     "<tr class = 'tr' colwidth='4'><td>"  +
-				 this.word[index].value  +
-				 "</td><td>"  +
-				 this.word[index].pos  +
-				 "</td><td>"  +
-				 meaning  +
-				 "</td><td>No wiki page found</td></tr>";
+this.fullText  += "<tr class = 'tr' colwidth='4'><td>"  +
+		  this.word[index].value  +
+		  "</td><td>"  +
+		  this.word[index].pos  +
+		  "</td><td>"  +
+		  meaning  +
+		  "</td><td>No wiki page found</td></tr>";
 
 }
 
@@ -81,7 +79,7 @@ this.flag  =  1;
 ```
 
 #### Note:
-Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, here you go. 
+Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, I gave the explanations above. 
 
 
 ## Project Description of before Shawn's Fork
