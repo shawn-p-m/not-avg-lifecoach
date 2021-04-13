@@ -5,18 +5,84 @@
 - Translate to French
 - Show Wikipedia Description
 
-### 1. Translate to French
+
+### 1. Translate to French in Chat Messenger
 The main chatbot messenger page now includes a button in the chatbot navbar (for mobile and desktop), that allows the user to toggle between English and French. This feature injects either English or French Bot responses into our Bot Component depending on the state of our button in the messenger navbar. For this feature, I am using the **npm translate API** https://www.npmjs.com/package/translate.
 
 #### About the translate API 
-As stated in the docs, the translate API can "Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), Yandex or [Libre](https://libretranslate.com/):" I used the Libre Engine because I like open source. Inside asyncronous Javascript functions the API can be used like so: 
+As stated in the docs, the translate API can "Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), Yandex or [Libre](https://libretranslate.com/):" I used the Libre Engine because I like open source. 
+
+Install the API in the terminal like so:
+``npm install translate``
+
+Simply import the library and set the engine like so:
 ```
-const text = await translate("Hello world", "es");
-console.log(text); // Hola mundo
+import translate from "translate";
+translate.engine = "libre";
 ```
 
-### 2. Show Wikipedia Description
+My usage inside async method: 
+```
+this.frenchText = await translate("Hello", "fr");
+```
 
+### 2. Show "Wikipedia Description" in POS Tagging Feature
+In the POS Tagging feature, I added an extra column called "Wikipedia Description". For each POS Tagging word that returned results from Wikipedia, I display this description in the table. For this feature I am using the **wikipedia API** https://www.npmjs.com/package/wikipedia.
+
+#### About the wikipedia API
+This API works by taking an input word you'd like to search as an argument in a function. It then returns a JSON object with a lot of data about the Wikipedia page that matches the input word. 
+
+Install the API in the terminal like so:
+``npm install wikipedia``
+
+Import the library like so:
+``const wiki = require("wikipedia");``
+
+My usage inside async method:
+```
+try {
+
+const  page  =  await  wiki.page(word);
+const  summary  =  await  page.summary();
+let  wikiDescription  =  summary.description ?  
+						 summary.description
+					   : "No wiki info found";
+
+this.fullText  +=
+				"<tr class = 'tr'><td>"  
+				+ this.word[index].value  +
+				"</td><td>"  +
+				this.word[index].pos  +
+				"</td><td>"  +
+				meaning  +
+				"</td><td>"  +
+				wikiDescription  +
+				"</td></tr>";
+
+this.flag  =  1;
+
+} catch (error) {
+
+if (!this.word[index.value]) {
+
+this.fullText  +=
+			     "<tr class = 'tr' colwidth='4'><td>"  +
+				 this.word[index].value  +
+				 "</td><td>"  +
+				 this.word[index].pos  +
+				 "</td><td>"  +
+				 meaning  +
+				 "</td><td>No wiki page found</td></tr>";
+
+}
+
+this.flag  =  1;
+
+}
+	```
+
+#### Note:
+Of course I had to write more JavaScript and Vue Code to have the DOM updated from my api calls dynamically. But because the assignment said to keep my explanation brief, here you go. 
 
 
 ## Project Description of before Shawn's Fork
