@@ -12,10 +12,10 @@ The main chatbot messenger page now includes a button in the chatbot navbar (for
 #### About the translate API 
 As stated in the docs, the translate API can "Convert text to different languages on Node.js and the browser. Flexible package and powerful back-end using Google (default), Yandex or [Libre](https://libretranslate.com/):" I used the Libre Engine because I like open source. 
 
-Install the API in the terminal like so:
+People install the API in the terminal like so:
 ``npm install translate``
 
-Simply import the library and set the engine like so:
+People import the library and set the engine like so:
 ```
 import translate from "translate";
 translate.engine = "libre";
@@ -32,10 +32,10 @@ In the POS Tagging feature, I added an extra column called "Wikipedia Descriptio
 #### About the wikipedia API
 This API works by taking an input word you'd like to search as an argument in a function. It then returns a JSON object with a lot of data about the Wikipedia page that matches the input word. 
 
-Install the API in the terminal like so:
+People install the API in the terminal like so:
 ``npm install wikipedia``
 
-Import the library like so:
+People import the library like so:
 ``const wiki = require("wikipedia");``
 
 My usage inside async method:
